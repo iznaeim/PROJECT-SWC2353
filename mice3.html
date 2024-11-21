@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vico Gamer X - Vico Store</title>
+    <link rel="stylesheet" href="productdetails.css">
+</head>
+
+<body>
+
+<header>
+    <div class="logo">
+        <img src="images/vicologo.jpg" alt="Vico Logo">
+    </div>
+    <nav>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="support.html">Support</a></li>
+            <li><a href="cart.html">Cart</a></li>
+            <li><a href="profile.html" class="profile-button">Profile</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main class="product-page">
+
+    <!-- Hero Section with Large Product Image -->
+    <section class="hero-section">
+        <div class="hero-text">
+            <h1>Vico Gamer X</h1>
+            <p>Elevate your game with the Vico Gamer X, crafted for high performance and maximum comfort during those intense gaming sessions.</p>
+        </div>
+        <div class="hero-image">
+            <img src="images/mice3.png" alt="Vico Gamer X">
+        </div>
+    </section>
+
+    <!-- Product Information Section -->
+    <section class="product-details">
+        <h2>Discover the Vico Gamer X</h2>
+        <p>The Vico Gamer X is built for speed and precision, with high-DPI settings and an ergonomic design to keep you comfortable and ahead of the competition.</p>
+        <ul>
+            <li><strong>Sensor:</strong> 12,000 DPI laser sensor</li>
+            <li><strong>Buttons:</strong> 7 programmable buttons</li>
+            <li><strong>Connectivity:</strong> Wired USB for lag-free gaming</li>
+            <li><strong>Ergonomics:</strong> Rubberized sides for a better grip</li>
+        </ul>
+    </section>
+
+    <!-- Pricing and CTA Section -->
+    <section class="pricing-section">
+        <h2>Starting at RM179</h2>
+        <p>Choose your model and features.</p>
+
+        <!-- Product Options -->
+        <div class="product-options">
+            <div class="option">
+                <h3>Standard</h3>
+                <p>RM179</p>
+                <button onclick="addToCart('Vico Gamer X - Standard', 179)">Buy Now</button>
+            </div>
+            <div class="option">
+                <h3>Pro</h3>
+                <p>RM219</p>
+                <button onclick="addToCart('Vico Gamer X - Pro', 219)">Buy Now</button>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <p>&copy; 2024 Vico. All rights reserved.</p>
+</footer>
+
+<script src="cart.js"></script>
+
+</body>
+</html>

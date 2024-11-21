@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vico - Order Tracking</title>
+    <link rel="stylesheet" href="ordertracking.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <img src="images/vicologo.jpg" alt="Vico Logo">
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="support.html">Support</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li><a href="signout.html" class="sign-out-button">Sign Out</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <div class="tracking-container">
+            <h1>Track Your Order</h1>
+            <p>Enter your order number to track the status of your purchase.</p>
+            <input type="text" id="order-id" placeholder="Enter Order Number">
+            <button onclick="trackOrder()">Track Order</button>
+
+            <div id="order-details" style="display: none;">
+                <h2>Order Details</h2>
+                <table>
+                    <tr>
+                        <th>Order Number</th>
+                        <td id="track-order-number">#12345</td>
+                    </tr>
+                    <tr>
+                        <th>Status</th>
+                        <td id="track-order-status">Processing</td>
+                    </tr>
+                    <tr>
+                        <th>Estimated Delivery</th>
+                        <td id="track-order-delivery">3-5 Business Days</td>
+                    </tr>
+                </table>
+                <h2>Items in Order</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Category</th>
+                            <th>Product</th>
+                            <th>Specification</th>
+                            <th>Quantity</th>
+                            <th>Price</th>
+                        </tr>
+                    </thead>
+                    <tbody id="order-items">
+                        <!-- Dynamically populated rows will appear here -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Vico. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        function trackOrder() {
+            const orderId = document.getElementById('order-id').value;
+            if (orderId.trim() === '') {
+                alert('Please enter an order number.');
+                return;
+            }
+
+            // Simulating dynamic order details
+            const orderDetails = {
+                orderNumber: orderId,
+                status: "Shipped",
+                delivery: "2-3 Business Days",
+                items: [
+                    { category: "Laptops", product: "Vico Laptop", specification: "15-inch, 512GB SSD", quantity: 1, price: 999.00 },
+                    { category: "Phones", product: "Vico Smartphone", specification: "64GB, Black", quantity: 1, price: 499.00 },
+                ]
+            };
+
+            // Populate order details
+            document.getElementById('track-order-number').innerText = orderDetails.orderNumber;
+            document.getElementById('track-order-status').innerText = orderDetails.status;
+            document.getElementById('track-order-delivery').innerText = orderDetails.delivery;
+
+            const orderItemsTable = document.getElementById('order-items');
+            orderItemsTable.innerHTML = ''; // Clear previous items
+            orderDetails.items.forEach(item => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${item.category}</td>
+                    <td>${item.product}</td>
+                    <td>${item.specification}</td>
+                    <td>${item.quantity}</td>
+                    <td>RM${item.price.toFixed(2)}</td>
+                `;
+                orderItemsTable.appendChild(row);
+            });
+
+            // Show the order details section
+            document.getElementById('order-details').style.display = 'block';
+        }
+    </script>
+</body>
+
+</html>

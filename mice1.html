@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vico Precision Pro - Vico Store</title>
+    <link rel="stylesheet" href="productdetails.css">
+</head>
+
+<body>
+
+<header>
+    <div class="logo">
+        <img src="images/vicologo.jpg" alt="Vico Logo">
+    </div>
+    <nav>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="support.html">Support</a></li>
+            <li><a href="cart.html">Cart</a></li>
+            <li><a href="profile.html" class="profile-button">Profile</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main class="product-page">
+
+    <!-- Hero Section with Large Product Image -->
+    <section class="hero-section">
+        <div class="hero-text">
+            <h1>Vico Precision Pro</h1>
+            <p>Enhance your gaming and work with the Vico Precision Pro, offering unparalleled accuracy and performance for professional users.</p>
+        </div>
+        <div class="hero-image">
+            <img src="images/mice1.png" alt="Vico Precision Pro">
+        </div>
+    </section>
+
+    <!-- Product Information Section -->
+    <section class="product-details">
+        <h2>Discover the Vico Precision Pro</h2>
+        <p>The Vico Precision Pro mouse features ultra-precise sensors, customizable buttons, and ergonomic design for both gamers and professionals who demand the best accuracy.</p>
+        <ul>
+            <li><strong>Sensor:</strong> High-precision 16,000 DPI sensor</li>
+            <li><strong>Buttons:</strong> 6 programmable buttons for customization</li>
+            <li><strong>Connectivity:</strong> Wired USB for low-latency performance</li>
+            <li><strong>Ergonomics:</strong> Ambidextrous design for all users</li>
+        </ul>
+    </section>
+
+    <!-- Pricing and CTA Section -->
+    <section class="pricing-section">
+        <h2>Starting at RM199</h2>
+        <p>Choose your model and features.</p>
+
+        <!-- Product Options -->
+        <div class="product-options">
+            <div class="option">
+                <h3>Standard</h3>
+                <p>RM199</p>
+                <button onclick="addToCart('Vico Precision Pro - Standard', 199)">Buy Now</button>
+            </div>
+            <div class="option">
+                <h3>Pro</h3>
+                <p>RM249</p>
+                <button onclick="addToCart('Vico Precision Pro - Pro', 249)">Buy Now</button>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <p>&copy; 2024 Vico. All rights reserved.</p>
+</footer>
+
+<script src="cart.js"></script>
+
+</body>
+</html>

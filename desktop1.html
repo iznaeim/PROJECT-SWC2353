@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vico Workstation X - Vico Store</title>
+    <link rel="stylesheet" href="productdetails.css">
+</head>
+
+<body>
+
+<header>
+    <div class="logo">
+        <img src="images/vicologo.jpg" alt="Vico Logo">
+    </div>
+    <nav>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="support.html">Support</a></li>
+            <li><a href="cart.html">Cart</a></li>
+            <li><a href="profile.html" class="profile-button">Profile</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main class="product-page">
+
+    <!-- Hero Section with Large Product Image -->
+    <section class="hero-section">
+        <div class="hero-text">
+            <h1>Vico Workstation X</h1>
+            <p>Built for professionals, the Vico Workstation X provides high performance and reliability for tasks that demand speed and efficiency.</p>
+        </div>
+        <div class="hero-image">
+            <img src="images/desktop1.png" alt="Vico Workstation X">
+        </div>
+    </section>
+
+    <!-- Product Information Section -->
+    <section class="product-details">
+        <h2>Discover the Vico Workstation X</h2>
+        <p>The Vico Workstation X is designed to power through demanding tasks with its cutting-edge processor, massive storage, and unparalleled graphics performance.</p>
+        <ul>
+            <li><strong>Processor:</strong> Intel Core i9 12th Gen</li>
+            <li><strong>Graphics:</strong> NVIDIA RTX 3080</li>
+            <li><strong>Memory:</strong> 64GB RAM</li>
+            <li><strong>Storage:</strong> 1TB SSD + 2TB HDD</li>
+            <li><strong>Operating System:</strong> Windows 11 Pro</li>
+        </ul>
+    </section>
+
+    <!-- Pricing and CTA Section -->
+    <section class="pricing-section">
+        <h2>Starting at RM8499</h2>
+        <p>Choose your model and features.</p>
+
+        <!-- Product Options -->
+        <div class="product-options">
+            <div class="option">
+                <h3>Standard</h3>
+                <p>RM8499</p>
+                <button onclick="addToCart('Vico Workstation X - Standard', 8499)">Buy Now</button>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <p>&copy; 2024 Vico. All rights reserved.</p>
+</footer>
+
+<script src="cart.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,150 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: white;
+}
+
+/* Header Styling */
+header {
+    position: fixed; /* Fixed to stay on top while scrolling */
+    top: 0;
+    width: 100%;
+    background-color: black; /* Darker black */
+    box-shadow: 0 2px 10px rgba(255, 0, 0, 0.5); /* Red shadow for accent */
+    padding: 7px 5px; /* Adjusted padding for better spacing */
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+	margin-left: -10px;
+}
+
+.logo img {
+    width: 150px;
+	margin-left: 100px;
+}
+
+nav {
+	margin-right: 30px;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ff0000; /* Red text */
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #fff; /* White on hover for contrast */
+    text-shadow: 0 0 5px rgba(255, 0, 0, 0.8); /* Red glow effect */
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+	padding: 200px;
+}
+
+.auth-container {
+    background: #222;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(255, 0, 0, 0.5);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.auth-container h1 {
+    margin-bottom: 20px;
+    color: red;
+}
+
+.input-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: white;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid red;
+    border-radius: 5px;
+    background-color: #333;
+    color: white;
+}
+
+.password-container {
+    display: flex;
+    align-items: center;
+}
+
+.password-container input {
+    flex: 1;
+}
+
+.password-container button {
+    margin-left: 10px;
+    padding: 10px;
+    background: none;
+    border: none;
+    color: red;
+    cursor: pointer;
+}
+
+.auth-button {
+    width: 100%;
+    padding: 10px;
+    background: red;
+    border: none;
+    color: black;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.auth-button:hover {
+    background: black;
+    color: red;
+}
+
+.extras {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.extras a {
+    color: red;
+    text-decoration: none;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #111;
+    color: red;
+}

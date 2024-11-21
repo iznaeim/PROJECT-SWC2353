@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vico Immersion - Vico Store</title>
+    <link rel="stylesheet" href="productdetails.css">
+</head>
+
+<body>
+
+<header>
+    <div class="logo">
+        <img src="images/vicologo.jpg" alt="Vico Logo">
+    </div>
+    <nav>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="support.html">Support</a></li>
+            <li><a href="cart.html">Cart</a></li>
+            <li><a href="profile.html" class="profile-button">Profile</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main class="product-page">
+
+    <!-- Hero Section with Large Product Image -->
+    <section class="hero-section">
+        <div class="hero-text">
+            <h1>Vico Immersion</h1>
+            <p>Step into the world of true sound with the Vico Immersion, engineered to deliver an unparalleled audio experience, ideal for gaming, music, and more.</p>
+        </div>
+        <div class="hero-image">
+            <img src="images/headset4.png" alt="Vico Immersion">
+        </div>
+    </section>
+
+    <!-- Product Information Section -->
+    <section class="product-details">
+        <h2>Discover the Vico Immersion</h2>
+        <p>The Vico Immersion headset combines innovative sound technology with ergonomic comfort. Perfect for those who demand superior sound clarity, comfort, and style during gaming, music, or long sessions.</p>
+        <ul>
+            <li><strong>Drivers:</strong> 50mm dynamic drivers for exceptional audio clarity</li>
+            <li><strong>Frequency Response:</strong> 15Hz - 22kHz for deep bass and crisp highs</li>
+            <li><strong>Connectivity:</strong> Wireless Bluetooth 5.0 with minimal latency</li>
+            <li><strong>Battery Life:</strong> Up to 30 hours of uninterrupted playtime</li>
+            <li><strong>Microphone:</strong> Noise-canceling detachable microphone for clear communication</li>
+        </ul>
+    </section>
+
+    <!-- Pricing and CTA Section -->
+    <section class="pricing-section">
+        <h2>Starting at RM799</h2>
+        <p>Choose your model and features.</p>
+
+        <!-- Product Options -->
+        <div class="product-options">
+            <div class="option">
+                <h3>Standard</h3>
+                <p>RM799</p>
+                <button onclick="addToCart('Vico Immersion - Standard', 799)">Buy Now</button>
+            </div>
+            <div class="option">
+                <h3>Pro</h3>
+                <p>RM999</p>
+                <button onclick="addToCart('Vico Immersion - Pro', 999)">Buy Now</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Additional Features -->
+    <section class="additional-features">
+        <h2>Why Choose Vico Immersion?</h2>
+        <div class="features-container">
+            <div class="feature">
+                <h3>Exceptional Sound Quality</h3>
+                <p>Enjoy immersive sound with 50mm dynamic drivers that deliver deep bass, crystal-clear mids, and crisp highs, bringing your games, music, and movies to life.</p>
+            </div>
+            <div class="feature">
+                <h3>Comfortable Design</h3>
+                <p>The lightweight design and soft memory foam ear cups ensure comfort even during extended use, making it perfect for gaming, studying, or listening to music all day.</p>
+            </div>
+            <div class="feature">
+                <h3>Detachable Noise-Canceling Mic</h3>
+                <p>Clear communication is guaranteed with the noise-canceling detachable microphone, ideal for gaming or professional calls.</p>
+            </div>
+            <div class="feature">
+                <h3>All-Day Battery Life</h3>
+                <p>The Vico Immersion's 30-hour battery life ensures you're ready for marathon gaming sessions or long hours of music without needing to recharge.</p>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <p>&copy; 2024 Vico. All rights reserved.</p>
+</footer>
+
+<script src="cart.js"></script>
+
+</body>
+</html>

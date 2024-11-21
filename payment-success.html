@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vico - Payment Successful</title>
+    <link rel="stylesheet" href="paymentsuccess.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <img src="images/vicologo.jpg" alt="Vico Logo">
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="support.html">Support</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li><a href="profile.html" class="profile-button">Profile</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <div class="payment-success-container">
+            <h1>Thank You for Your Purchase!</h1>
+            <p>Your payment has been successfully processed. Below is your order receipt.</p>
+
+            <!-- Order Receipt Section -->
+            <div class="receipt">
+                <h2>Order Receipt</h2>
+                <p><strong>Order Number:</strong> #<span id="order-number">12345</span></p>
+                <p><strong>Order Date:</strong> <span id="order-date">2024-11-18</span></p>
+
+                <!-- Customer Information -->
+                <h3>Billing Information:</h3>
+                <p><strong>Name:</strong> <span id="customer-name">John Doe</span></p>
+                <p><strong>Email:</strong> <span id="customer-email">johndoe@example.com</span></p>
+                <p><strong>Address:</strong> <span id="customer-address">123 Vico Street, Kuala Lumpur, Malaysia</span></p>
+
+                <!-- Order Items -->
+                <h3>Items Purchased:</h3>
+                <div id="order-items">
+                    <!-- Dynamically populated order items will appear here -->
+                </div>
+
+                <!-- Order Total -->
+                <h3>Total: RM<span id="total-amount">0.00</span></h3>
+            </div>
+
+            <!-- Confirmation Button -->
+            <button onclick="goToHomePage()" class="back-button">Return to Home Page</button>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Vico. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript for dynamic data population -->
+    <script>
+        // Retrieve checkout data from localStorage
+        const checkoutData = JSON.parse(localStorage.getItem('checkoutData')) || {};
+        const { name, email, address, cartItems = [], total = 0 } = checkoutData;
+
+        // References to receipt elements
+        const orderNumber = document.getElementById('order-number');
+        const orderDate = document.getElementById('order-date');
+        const customerName = document.getElementById('customer-name');
+        const customerEmail = document.getElementById('customer-email');
+        const customerAddress = document.getElementById('customer-address');
+        const orderItemsDiv = document.getElementById('order-items');
+        const totalAmount = document.getElementById('total-amount');
+
+        // Generate random order number
+        const generatedOrderNumber = Math.floor(Math.random() * 100000).toString().padStart(5, '0');
+        orderNumber.innerText = generatedOrderNumber;
+
+        // Display current date
+        orderDate.innerText = new Date().toLocaleDateString();
+
+        // Populate billing information
+        customerName.innerText = name || 'N/A';
+        customerEmail.innerText = email || 'N/A';
+        customerAddress.innerText = address || 'N/A';
+
+        // Populate order items
+        cartItems.forEach(item => {
+            const itemDiv = document.createElement('div');
+            itemDiv.className = 'order-item';
+            itemDiv.innerHTML = `${item.name} - RM${item.price.toFixed(2)}`;
+            orderItemsDiv.appendChild(itemDiv);
+        });
+
+        // Display total amount
+        totalAmount.innerText = parseFloat(total).toFixed(2);
+
+        // Save order details to order history in localStorage
+        const orderHistory = JSON.parse(localStorage.getItem('orderHistory')) || [];
+        orderHistory.push({
+            orderNumber: generatedOrderNumber,
+            orderDate: new Date().toLocaleDateString(),
+            items: cartItems,
+            total: parseFloat(total).toFixed(2),
+            address: address || 'N/A',
+        });
+        localStorage.setItem('orderHistory', JSON.stringify(orderHistory));
+
+        // Clear checkout data
+        localStorage.removeItem('checkoutData');
+
+        // Function to redirect to home page
+        function goToHomePage() {
+            window.location.href = 'index.html';
+        }
+    </script>
+
+</body>
+
+</html>

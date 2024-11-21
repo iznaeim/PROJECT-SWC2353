@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vico - Checkout</title>
+    <link rel="stylesheet" href="checkout.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <img src="images/vicologo.jpg" alt="Vico Logo">
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="support.html">Support</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li><a href="profile.html" class="profile-button">Profile</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <h1>Checkout</h1>
+        <p>Please enter your details to complete your purchase.</p>
+
+        <div class="checkout-container">
+            <form id="checkout-form">
+                <h2>Billing Information</h2>
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="address">Address:</label>
+                <input type="text" id="address" name="address" required>
+
+                <label for="city">City:</label>
+                <input type="text" id="city" name="city" required>
+
+                <label for="zip">ZIP Code:</label>
+                <input type="text" id="zip" name="zip" required>
+
+                <!-- Order Summary -->
+                <h2>Your Order</h2>
+                <div id="order-summary">
+                    <!-- Order items will be dynamically populated here -->
+                </div>
+                <h2>Total: RM<span id="order-total">0.00</span></h2>
+
+                <!-- Payment Methods -->
+                <h2>Payment Method</h2>
+                <label for="payment-method">Choose Payment Method:</label>
+                <select id="payment-method" name="payment-method" required>
+					<option value="">--Select a Payment Method--</option>
+                    <option value="online-transfer">Online Bank Transfer</option>
+                    <option value="debit-card">Debit Card</option>
+                    <option value="e-wallet">E-Wallet</option>
+                    <option value="cod">Cash on Delivery (COD)</option>
+                </select>
+
+                <!-- Bank Transfer Options -->
+                <div id="bank-transfer-options" class="payment-options" style="display: none;">
+                    <h3>Select Bank:</h3>
+                    <label for="bank">Bank:</label>
+                    <select id="bank" name="bank">
+                        <option value="">--Select a Bank--</option>
+                        <option value="maybank">Maybank</option>
+                        <option value="cimb">CIMB</option>
+                        <option value="public-bank">Public Bank</option>
+                        <option value="rhb">RHB</option>
+                    </select>
+                    <p>Transfer to the following bank account: <strong>123-456-789012 (Vico Technologies)</strong></p>
+                    <p>Please use the order number as the reference when making the transfer.</p>
+                </div>
+
+                <!-- Debit Card Options -->
+<div id="debit-card-options" class="payment-options" style="display: none;">
+    <h3>Enter Debit Card Details:</h3>
+    <label for="card-number">Card Number:</label>
+    <input type="text" id="card-number" name="card-number" placeholder="XXXX-XXXX-XXXX-XXXX" maxlength="19">
+
+    <label for="expiry-date">Expiry Date:</label>
+    <input type="month" id="expiry-date" name="expiry-date">
+
+    <label for="cvv">CVV:</label>
+    <input type="text" id="cvv" name="cvv" placeholder="XXX" maxlength="3">
+</div>
+
+                <!-- E-Wallet Options -->
+                <div id="e-wallet-options" class="payment-options" style="display: none;">
+                    <h3>Select E-Wallet:</h3>
+                    <label for="e-wallet">E-Wallet:</label>
+                    <select id="e-wallet" name="e-wallet">
+                        <option value="">--Select an E-Wallet--</option>
+                        <option value="grabpay">GrabPay</option>
+                        <option value="tng">Touch 'n Go</option>
+                        <option value="boost">Boost</option>
+                    </select>
+                </div>
+
+                <!-- COD Instructions -->
+                <div id="cod-options" class="payment-options" style="display: none;">
+                    <p>Cash on Delivery will require payment upon product delivery.</p>
+                    <p>Please ensure that someone is available at the delivery address.</p>
+                </div>
+
+                <button type="submit" class="submit-button">Complete Purchase</button>
+            </form>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Vico. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript for Payment Logic -->
+    <script>
+        const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+        const orderSummary = document.getElementById('order-summary');
+        const orderTotal = document.getElementById('order-total');
+        const paymentMethodSelect = document.getElementById('payment-method');
+        const bankTransferOptions = document.getElementById('bank-transfer-options');
+        const debitCardOptions = document.getElementById('debit-card-options');
+        const eWalletOptions = document.getElementById('e-wallet-options');
+        const codOptions = document.getElementById('cod-options');
+
+        let total = 0;
+
+        // Display order items
+        cartItems.forEach(item => {
+            const itemDiv = document.createElement('div');
+            itemDiv.className = 'order-item';
+            itemDiv.innerHTML = `${item.name} - RM${item.price}`;
+            orderSummary.appendChild(itemDiv);
+            total += item.price;
+        });
+
+        orderTotal.innerText = total.toFixed(2);
+
+        // Toggle payment method options
+        paymentMethodSelect.addEventListener('change', function () {
+            const method = this.value;
+            bankTransferOptions.style.display = method === 'online-transfer' ? 'block' : 'none';
+            debitCardOptions.style.display = method === 'debit-card' ? 'block' : 'none';
+            eWalletOptions.style.display = method === 'e-wallet' ? 'block' : 'none';
+            codOptions.style.display = method === 'cod' ? 'block' : 'none';
+        });
+
+        // Handle form submission
+        document.getElementById('checkout-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const paymentMethod = document.getElementById('payment-method').value;
+            const bank = document.getElementById('bank').value;
+            const eWallet = document.getElementById('e-wallet').value;
+            const cardNumber = document.getElementById('card-number').value.trim();
+            const expiryDate = document.getElementById('expiry-date').value.trim();
+            const cvv = document.getElementById('cvv').value.trim();
+
+            let valid = true;
+
+            if (paymentMethod === 'online-transfer' && !bank) {
+                alert('Please select a bank for the online transfer.');
+                valid = false;
+            } else if (paymentMethod === 'debit-card' && (!cardNumber || !expiryDate || !cvv)) {
+                alert('Please complete all debit card details.');
+                valid = false;
+            } else if (paymentMethod === 'e-wallet' && !eWallet) {
+                alert('Please select an E-Wallet.');
+                valid = false;
+            }
+
+            if (!valid) return;
+
+            // Collect form data
+            const checkoutData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                address: document.getElementById('address').value,
+                city: document.getElementById('city').value,
+                zip: document.getElementById('zip').value,
+                paymentMethod: paymentMethod,
+                bank: paymentMethod === 'online-transfer' ? bank : null,
+                eWallet: paymentMethod === 'e-wallet' ? eWallet : null,
+                total: total.toFixed(2),
+                cartItems: cartItems
+            };
+
+            // Store checkout data in localStorage
+            localStorage.setItem('checkoutData', JSON.stringify(checkoutData));
+
+            // Clear the cart
+            localStorage.removeItem('cart');
+
+            // Redirect to success page
+            window.location.href = 'payment-success.html';
+        });
+    </script>
+
+</body>
+
+</html>

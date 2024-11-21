@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vico - Contact Submission</title>
+    <link rel="stylesheet" href="contactsuccess.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <img src="images/vicologo.jpg" alt="Vico Logo">
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="support.html">Support</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li><a href="profile.html" class="profile-button">Profile</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <div class="success-container">
+            <h1>Thank You!</h1>
+            <p>Your message has been successfully submitted. Our support team will get back to you shortly.</p>
+            <p><strong>Name:</strong> <span id="user-name"></span></p>
+            <p><strong>Email:</strong> <span id="user-email"></span></p>
+            <p><strong>Message:</strong> <span id="user-message"></span></p>
+            <a href="index.html" class="button">Return to Home</a>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Vico. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Retrieve submission data from localStorage
+        const submissionData = JSON.parse(localStorage.getItem("submissionData")) || {};
+
+        // Populate the success page with submission details
+        document.getElementById("user-name").innerText = submissionData.name || "N/A";
+        document.getElementById("user-email").innerText = submissionData.email || "N/A";
+        document.getElementById("user-message").innerText = submissionData.query || "N/A";
+
+        // Clear the submission data after showing the success message
+        localStorage.removeItem("submissionData");
+    </script>
+</body>
+</html>

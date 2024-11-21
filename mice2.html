@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vico UltraLight - Vico Store</title>
+    <link rel="stylesheet" href="productdetails.css">
+</head>
+
+<body>
+
+<header>
+    <div class="logo">
+        <img src="images/vicologo.jpg" alt="Vico Logo">
+    </div>
+    <nav>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="support.html">Support</a></li>
+            <li><a href="cart.html">Cart</a></li>
+            <li><a href="profile.html" class="profile-button">Profile</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main class="product-page">
+
+    <!-- Hero Section with Large Product Image -->
+    <section class="hero-section">
+        <div class="hero-text">
+            <h1>Vico UltraLight</h1>
+            <p>Designed for gamers and professionals who value speed and agility, the Vico UltraLight is built to be the fastest mouse in your arsenal.</p>
+        </div>
+        <div class="hero-image">
+            <img src="images/mice2.png" alt="Vico UltraLight">
+        </div>
+    </section>
+
+    <!-- Product Information Section -->
+    <section class="product-details">
+        <h2>Discover the Vico UltraLight</h2>
+        <p>The Vico UltraLight offers a feather-light design with an ultra-fast response time, perfect for competitive gamers looking for the edge in every match.</p>
+        <ul>
+            <li><strong>Sensor:</strong> 8,000 DPI optical sensor for precision</li>
+            <li><strong>Weight:</strong> 60 grams for ultra-light performance</li>
+            <li><strong>Connectivity:</strong> Wireless with low-latency Bluetooth</li>
+            <li><strong>Buttons:</strong> 5 customizable buttons</li>
+        </ul>
+    </section>
+
+    <!-- Pricing and CTA Section -->
+    <section class="pricing-section">
+        <h2>Starting at RM159</h2>
+        <p>Choose your model and features.</p>
+
+        <!-- Product Options -->
+        <div class="product-options">
+            <div class="option">
+                <h3>Light</h3>
+                <p>RM159</p>
+                <button onclick="addToCart('Vico UltraLight - Light', 159)">Buy Now</button>
+            </div>
+            <div class="option">
+                <h3>Pro</h3>
+                <p>RM199</p>
+                <button onclick="addToCart('Vico UltraLight - Pro', 199)">Buy Now</button>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <p>&copy; 2024 Vico. All rights reserved.</p>
+</footer>
+
+<script src="cart.js"></script>
+
+</body>
+</html>
