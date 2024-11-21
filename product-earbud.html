@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vico Earbuds - Vico Store</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <div class="logo">
+        <img src="images/vico-logo.png" alt="Vico Logo">
+    </div>
+    <nav>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="support.html">Support</a></li>
+            <li><a href="cart.html">Cart</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="signout.html" class="sign-out-button">Sign Out</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main class="product-page">
+
+    <!-- Hero Section with Large Product Image -->
+    <section class="hero-section">
+        <div class="hero-text">
+            <h1>Vico Earbuds</h1>
+            <p>Experience true wireless freedom with Vico Earbuds. Exceptional sound meets cutting-edge technology.</p>
+        </div>
+        <div class="hero-image">
+            <img src="images/vicoearbud.jpeg" alt="Vico Earbuds">
+        </div>
+    </section>
+
+    <!-- Product Information Section -->
+    <section class="product-details">
+        <h2>Introducing Vico Earbuds</h2>
+        <p>The Vico Earbuds are designed to provide you with a seamless audio experience. Enjoy your favorite music, podcasts, and calls with premium sound quality and an ergonomic design.</p>
+        <ul>
+            <li><strong>Sound Quality:</strong> High-fidelity audio with deep bass</li>
+            <li><strong>Battery Life:</strong> Up to 24 hours of listening time with charging case</li>
+            <li><strong>Connectivity:</strong> Bluetooth 5.0 for a stable connection</li>
+            <li><strong>Water Resistance:</strong> IPX4 rating for sweat and water resistance</li>
+            <li><strong>Colors:</strong> Available in Black, White, and Silver</li>
+        </ul>
+    </section>
+
+    <!-- Pricing and CTA Section -->
+    <section class="pricing-section">
+        <h2>Only RM150</h2>
+        <p>Choose your color and enjoy unparalleled sound quality.</p>
+
+        <!-- Product Options -->
+        <div class="product-options">
+            <div class="option">
+                <h3>Black</h3>
+                <p>RM150</p>
+                <button onclick="addToCart('Vico Earbuds - Black', 150)">Buy Now</button>
+            </div>
+            <div class="option">
+                <h3>Mocha</h3>
+                <p>RM150</p>
+                <button onclick="addToCart('Vico Earbuds - Mocha', 150)">Buy Now</button>
+            </div>
+            <div class="option">
+                <h3>Silver</h3>
+                <p>RM150</p>
+                <button onclick="addToCart('Vico Earbuds - Silver', 150)">Buy Now</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Additional Features -->
+    <section class="additional-features">
+        <h2>Why Choose Vico Earbuds?</h2>
+        <div class="features-container">
+            <div class="feature">
+                <h3>Comfort Fit</h3>
+                <p>Designed for all-day comfort, these earbuds come with customizable ear tips for the perfect fit.</p>
+            </div>
+            <div class="feature">
+                <h3>Active Noise Cancellation</h3>
+                <p>Block out distractions and immerse yourself in your music with advanced noise-canceling technology.</p>
+            </div>
+            <div class="feature">
+                <h3>Seamless Touch Control</h3>
+                <p>Control your music and calls effortlessly with touch-sensitive controls.</p>
+            </div>
+            <div class="feature">
+                <h3>Portable Charging Case</h3>
+                <p>The sleek charging case provides additional battery life and easy portability.</p>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <p>&copy; 2024 Vico. All rights reserved.</p>
+</footer>
+
+<script src="cart.js"></script>
+
+</body>
+</html>

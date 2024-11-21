@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vico - Support</title>
+    <link rel="stylesheet" href="supportstyle.css">
+</head>
+<body>
+
+<!-- Header -->
+<header>
+    <div class="logo">
+        <img src="images/vicologo.jpg" alt="Vico Logo">
+    </div>
+    <nav>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="support.html" class="active">Support</a></li>
+            <li><a href="cart.html">Cart</a></li>
+            <li><a href="profile.html" class="profile-button">Profile</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- Main Content -->
+<main>
+    <!-- Introduction Section -->
+    <section class="support-intro">
+        <h1>We're Here to Help!</h1>
+        <p>Need assistance? Check our FAQs or reach out to us directly. Our team is always ready to assist you.</p>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-item">
+            <h3>How do I track my order?</h3>
+            <p>You can track your order by logging into your account and visiting the <a href="profile.html#order-history">Order History</a> section. You'll find tracking details and updates there.</p>
+        </div>
+        <div class="faq-item">
+            <h3>What is your return policy?</h3>
+            <p>We accept returns within 30 days of purchase for most items. Please visit our <a href="privacy-policy.html">Return Policy</a> page for full details.</p>
+        </div>
+        <div class="faq-item">
+            <h3>How can I contact customer support?</h3>
+            <p>Feel free to reach out via email at <a href="mailto:support@vico.com">support@vico.com</a> or call us at <a href="tel:+60312345678">+603-1234-5678</a>. We're available 9 AM - 6 PM (Monday to Friday).</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <h2>Contact Us</h2>
+        <div class="contact-details">
+            <p>If you need personalized assistance, don't hesitate to get in touch with us through the form below or using our contact details.</p>
+            <p>Email: <a href="mailto:support@vico.com">support@vico.com</a></p>
+            <p>Phone: <a href="tel:+60312345678">+603-1234-5678</a></p>
+        </div>
+
+        <!-- Support Form -->
+        <div class="support-form">
+            <h3>Send us a Message</h3>
+            <form id="support-form">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+
+                <label for="email">Your Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+
+                <label for="query">Your Message</label>
+                <textarea id="query" name="query" rows="5" placeholder="Describe your issue or question" required></textarea>
+
+                <button type="submit" class="button">Submit</button>
+            </form>
+            <p id="form-message" style="display: none;"></p>
+        </div>
+    </section>
+</main>
+
+<!-- Footer -->
+<footer>
+    <p>&copy; 2024 Vico. All rights reserved.</p>
+</footer>
+
+<script>
+    // Handle form submission
+    document.getElementById("support-form").addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const name = document.getElementById("name").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const query = document.getElementById("query").value.trim();
+
+        if (name && email && query) {
+            // Save data temporarily for confirmation
+            const submissionData = { name, email, query };
+            localStorage.setItem("submissionData", JSON.stringify(submissionData));
+
+            // Redirect to confirmation page
+            window.location.href = "contact-succcess.html";
+        } else {
+            const message = document.getElementById("form-message");
+            message.textContent = "Please fill in all fields.";
+            message.style.display = "block";
+            message.style.color = "red";
+        }
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vico - Receipt</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+    <div class="logo">
+        <img src="images/vico-logo.png" alt="Vico Logo">
+    </div>
+    <nav>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="support.html">Support</a></li>
+            <li><a href="cart.html">Cart</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="signout.html" class="sign-out-button">Sign Out</a></li>
+        </ul>
+    </nav>
+</header>
+
+    <main>
+        <h1>Receipt</h1>
+        <p>Thank you for your purchase! Below are the details of your order:</p>
+
+        <!-- Order Summary Section -->
+        <section class="order-summary">
+            <h2>Order Details</h2>
+            <table class="receipt-table">
+                <thead>
+                    <tr>
+                        <th>Product</th>
+                        <th>Quantity</th>
+                        <th>Price (RM)</th>
+                    </tr>
+                </thead>
+                <tbody id="receipt-items">
+                    <!-- Dynamically filled from JavaScript -->
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Customer Information -->
+        <section>
+            <h2>Customer Information</h2>
+            <p><strong>Name:</strong> <span id="customer-name"></span></p>
+            <p><strong>Email:</strong> <span id="customer-email"></span></p>
+            <p><strong>Address:</strong> <span id="customer-address"></span>, <span id="customer-city"></span>, <span id="customer-zip"></span></p>
+        </section>
+
+        <!-- Price Breakdown -->
+        <section class="price-breakdown">
+            <h2>Price Breakdown</h2>
+            <p><strong>Subtotal:</strong> RM<span id="subtotal">0</span></p>
+            <p><strong>Shipping:</strong> RM<span id="shipping">15</span> (Flat rate)</p>
+            <p><strong>Total:</strong> RM<span id="total">0</span></p>
+        </section>
+
+        <!-- Return to Home Button -->
+        <a href="index.html" class="button">Back to Home</a>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Vico. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Retrieve customer and cart data from localStorage
+        const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+        const customerDetails = JSON.parse(localStorage.getItem('customerDetails'));
+        const receiptItems = document.getElementById('receipt-items');
+        const subtotalElement = document.getElementById('subtotal');
+        const totalElement = document.getElementById('total');
+        
+        // Customer information
+        document.getElementById('customer-name').textContent = customerDetails.name;
+        document.getElementById('customer-email').textContent = customerDetails.email;
+        document.getElementById('customer-address').textContent = customerDetails.address;
+        document.getElementById('customer-city').textContent = customerDetails.city;
+        document.getElementById('customer-zip').textContent = customerDetails.zip;
+
+        let subtotal = 0;
+
+        // Fill the table with cart data
+        cartItems.forEach(item => {
+            const row = document.createElement('tr');
+
+            const nameCell = document.createElement('td');
+            nameCell.textContent = item.name;
+
+            const quantityCell = document.createElement('td');
+            quantityCell.textContent = item.quantity;
+
+            const priceCell = document.createElement('td');
+            priceCell.textContent = 'RM' + (item.price * item.quantity).toFixed(2);
+
+            row.appendChild(nameCell);
+            row.appendChild(quantityCell);
+            row.appendChild(priceCell);
+
+            receiptItems.appendChild(row);
+
+            // Calculate subtotal
+            subtotal += item.price * item.quantity;
+        });
+
+        // Display the subtotal, shipping, and total
+        const shipping = 15; // Flat rate shipping fee
+        const total = subtotal + shipping;
+
+        subtotalElement.textContent = subtotal.toFixed(2);
+        totalElement.textContent = total.toFixed(2);
+
+        // Clear cart after displaying the receipt
+        localStorage.removeItem('cart');
+        localStorage.removeItem('customerDetails');
+    </script>
+
+</body>
+</html>

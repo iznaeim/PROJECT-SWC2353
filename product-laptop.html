@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vico Laptop - Vico Store</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <div class="logo">
+        <img src="images/vico-logo.png" alt="Vico Logo">
+    </div>
+    <nav>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="support.html">Support</a></li>
+            <li><a href="cart.html">Cart</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="signout.html" class="sign-out-button">Sign Out</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main class="product-page">
+
+    <!-- Hero Section with Large Product Image -->
+    <section class="hero-section">
+        <div class="hero-text">
+            <h1>Vico Laptop</h1>
+            <p>Unleash your creativity with the all-new Vico Laptop. Performance meets elegance.</p>
+        </div>
+        <div class="hero-image">
+            <img src="images/vicolaptop3.jpg" alt="Vico Laptop">
+        </div>
+    </section>
+
+    <!-- Product Information Section -->
+    <section class="product-details">
+        <h2>Discover the Vico Laptop</h2>
+        <p>The Vico Laptop combines cutting-edge technology with a sleek design, making it the perfect companion for work and play. Experience lightning-fast performance with its powerful specs.</p>
+        <ul>
+            <li><strong>Display:</strong> 15-inch Retina Display with True Tone</li>
+            <li><strong>Processor:</strong> Vico M1 Chip with 8-Core CPU</li>
+            <li><strong>Memory:</strong> 16GB Unified Memory</li>
+            <li><strong>Storage:</strong> Up to 1TB SSD</li>
+            <li><strong>Battery Life:</strong> Up to 20 hours of usage</li>
+        </ul>
+    </section>
+
+    <!-- Pricing and CTA Section -->
+    <section class="pricing-section">
+        <h2>Starting at RM3,000</h2>
+        <p>Select your model and specifications.</p>
+
+        <!-- Product Options (like Apple’s selection design) -->
+        <div class="product-options">
+            <div class="option">
+                <h3>256GB SSD</h3>
+                <p>RM3,000</p>
+                <button onclick="addToCart('Vico Laptop - 256GB SSD', 3000)">Buy Now</button>
+            </div>
+            <div class="option">
+                <h3>512GB SSD</h3>
+                <p>RM3,500</p>
+                <button onclick="addToCart('Vico Laptop - 512GB SSD', 3500)">Buy Now</button>
+            </div>
+            <div class="option">
+                <h3>1TB SSD</h3>
+                <p>RM4,000</p>
+                <button onclick="addToCart('Vico Laptop - 1TB SSD', 4000)">Buy Now</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Additional Features -->
+    <section class="additional-features">
+        <h2>Why Choose Vico Laptop?</h2>
+        <div class="features-container">
+            <div class="feature">
+                <h3>Stunning Retina Display</h3>
+                <p>Immerse yourself in vibrant colors and sharp details with the 15-inch Retina Display.</p>
+            </div>
+            <div class="feature">
+                <h3>Powerful Performance</h3>
+                <p>Powered by the Vico M1 Chip, this laptop handles everything from heavy software to gaming effortlessly.</p>
+            </div>
+            <div class="feature">
+                <h3>Long-Lasting Battery</h3>
+                <p>Enjoy all-day battery life with up to 20 hours of usage on a single charge.</p>
+            </div>
+            <div class="feature">
+                <h3>Lightweight & Portable</h3>
+                <p>Designed for on-the-go, the Vico Laptop is incredibly lightweight yet robust.</p>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <p>&copy; 2024 Vico. All rights reserved.</p>
+</footer>
+
+<script src="cart.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vico Smartphone - Vico Store</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <div class="logo">
+        <img src="images/vico-logo.png" alt="Vico Logo">
+    </div>
+    <nav>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="support.html">Support</a></li>
+            <li><a href="cart.html">Cart</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="signout.html" class="sign-out-button">Sign Out</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main class="product-page">
+
+    <!-- Hero Section with Large Product Image -->
+    <section class="hero-section">
+        <div class="hero-text">
+            <h1>Vico Smartphone</h1>
+            <p>Revolutionary design meets exceptional performance. Discover the future with Vico Smartphone.</p>
+        </div>
+        <div class="hero-image">
+            <img src="images/vicophone9.jpg" alt="Vico Smartphone">
+        </div>
+    </section>
+
+    <!-- Product Information Section -->
+    <section class="product-details">
+        <h2>Meet the Vico Smartphone</h2>
+        <p>The Vico Smartphone delivers top-of-the-line technology in a sleek, elegant design. With a powerful processor, stunning camera, and long-lasting battery, it's everything you need in your pocket.</p>
+        <ul>
+            <li><strong>Display:</strong> 6.1-inch Liquid Retina HD</li>
+            <li><strong>Processor:</strong> Vico A14 Bionic chip</li>
+            <li><strong>Camera:</strong> Dual 12MP Ultra Wide and Wide cameras</li>
+            <li><strong>Battery Life:</strong> Up to 17 hours of video playback</li>
+            <li><strong>Storage:</strong> Available in 64GB, 128GB, and 256GB</li>
+        </ul>
+    </section>
+
+    <!-- Pricing and CTA Section -->
+    <section class="pricing-section">
+        <h2>Starting at RM1200</h2>
+        <p>Choose your model and capacity.</p>
+
+        <!-- Product Options (like Apple’s selection design) -->
+        <div class="product-options">
+            <div class="option">
+                <h3>64GB</h3>
+                <p>RM1200</p>
+                <button onclick="addToCart('Vico Smartphone - 64GB', 1200)">Buy Now</button>
+            </div>
+            <div class="option">
+                <h3>128GB</h3>
+                <p>RM1500</p>
+                <button onclick="addToCart('Vico Smartphone - 128GB', 1500)">Buy Now</button>
+            </div>
+            <div class="option">
+                <h3>256GB</h3>
+                <p>RM1700</p>
+                <button onclick="addToCart('Vico Smartphone - 256GB', 1700)">Buy Now</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Additional Features (Smooth Scroll) -->
+    <section class="additional-features">
+        <h2>Why Choose Vico?</h2>
+        <div class="features-container">
+            <div class="feature">
+                <h3>Stunning Display</h3>
+                <p>Experience vibrant colors and true blacks with the Vico Smartphone's Liquid Retina display.</p>
+            </div>
+            <div class="feature">
+                <h3>Powerful Performance</h3>
+                <p>The Vico A14 Bionic chip ensures that every task is handled smoothly and efficiently, from gaming to photo editing.</p>
+            </div>
+            <div class="feature">
+                <h3>Pro-Grade Camera</h3>
+                <p>Capture stunning photos with the dual 12MP cameras, featuring Night Mode and 4K video recording.</p>
+            </div>
+            <div class="feature">
+                <h3>All-Day Battery</h3>
+                <p>Keep going longer with a battery that lasts up to 17 hours, even with heavy use.</p>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <p>&copy; 2024 Vico. All rights reserved.</p>
+</footer>
+
+<script src="cart.js"></script>
+
+</body>
+</html>

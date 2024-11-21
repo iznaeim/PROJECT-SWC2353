@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vico Smartwatch - Vico Store</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <div class="logo">
+        <img src="images/vico-logo.png" alt="Vico Logo">
+    </div>
+    <nav>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="support.html">Support</a></li>
+            <li><a href="cart.html">Cart</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="signout.html" class="sign-out-button">Sign Out</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main class="product-page">
+
+    <!-- Hero Section with Large Product Image -->
+    <section class="hero-section">
+        <div class="hero-text">
+            <h1>Vico Smartwatch</h1>
+            <p>Your health, fitness, and productivity in one device. Discover the new Vico Smartwatch.</p>
+        </div>
+        <div class="hero-image">
+            <img src="images/vicosmartwatch2.png" alt="Vico Smartwatch">
+        </div>
+    </section>
+
+    <!-- Product Information Section -->
+    <section class="product-details">
+        <h2>Meet the Vico Smartwatch</h2>
+        <p>The Vico Smartwatch combines sleek design, cutting-edge technology, and powerful health features. From tracking your workouts to monitoring your heart rate, this watch does it all.</p>
+        <ul>
+            <li><strong>Display:</strong> 1.78-inch OLED Retina Display</li>
+            <li><strong>Processor:</strong> Vico S6 Dual-core processor</li>
+            <li><strong>Health Features:</strong> ECG, Blood Oxygen Monitoring, Sleep Tracking</li>
+            <li><strong>Battery Life:</strong> Up to 18 hours of regular use</li>
+            <li><strong>Storage:</strong> 32GB built-in</li>
+        </ul>
+    </section>
+
+    <!-- Pricing and CTA Section -->
+    <section class="pricing-section">
+        <h2>Starting at RM800</h2>
+        <p>Choose your model and strap.</p>
+
+        <!-- Product Options (like Apple’s selection design) -->
+        <div class="product-options">
+            <div class="option">
+                <h3>Standard Edition</h3>
+                <p>RM800</p>
+                <button onclick="addToCart('Vico Smartwatch - Standard Edition', 800)">Buy Now</button>
+            </div>
+            <div class="option">
+                <h3>Sport Edition</h3>
+                <p>RM900</p>
+                <button onclick="addToCart('Vico Smartwatch - Sport Edition', 900)">Buy Now</button>
+            </div>
+            <div class="option">
+                <h3>Luxury Edition</h3>
+                <p>RM1200</p>
+                <button onclick="addToCart('Vico Smartwatch - Luxury Edition', 1200)">Buy Now</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Additional Features (Smooth Scroll) -->
+    <section class="additional-features">
+        <h2>Why Choose Vico Smartwatch?</h2>
+        <div class="features-container">
+            <div class="feature">
+                <h3>Advanced Health Tracking</h3>
+                <p>Monitor your heart rate, ECG, blood oxygen levels, and more with precision sensors.</p>
+            </div>
+            <div class="feature">
+                <h3>Stay Connected</h3>
+                <p>Receive notifications, calls, and texts directly on your wrist with the Vico Smartwatch.</p>
+            </div>
+            <div class="feature">
+                <h3>Fitness at Your Fingertips</h3>
+                <p>Track your workouts, steps, and calories burned, and stay motivated with daily goals.</p>
+            </div>
+            <div class="feature">
+                <h3>Long-Lasting Battery</h3>
+                <p>Keep going all day with a battery life of up to 18 hours, even with continuous activity tracking.</p>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <p>&copy; 2024 Vico. All rights reserved.</p>
+</footer>
+
+<script src="cart.js"></script>
+
+</body>
+</html>

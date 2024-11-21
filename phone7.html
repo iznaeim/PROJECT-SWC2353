@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vico Aurora - Vico Store</title>
+    <link rel="stylesheet" href="productdetails.css">
+</head>
+
+<body>
+
+<header>
+    <div class="logo">
+        <img src="images/vicologo.jpg" alt="Vico Logo">
+    </div>
+    <nav>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="support.html">Support</a></li>
+            <li><a href="cart.html">Cart</a></li>
+            <li><a href="profile.html" class="profile-button">Profile</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main class="product-page">
+
+    <!-- Hero Section with Large Product Image -->
+    <section class="hero-section">
+        <div class="hero-text">
+            <h1>Vico Aurora</h1>
+            <p>Embrace the future with the stunning Vico Aurora. A smartphone designed for exceptional performance, photography, and entertainment.</p>
+        </div>
+        <div class="hero-image">
+            <img src="images/phone7.png" alt="Vico Aurora">
+        </div>
+    </section>
+
+    <!-- Product Information Section -->
+    <section class="product-details">
+        <h2>Discover the Vico Aurora</h2>
+        <p>The Vico Aurora is built to perform. Featuring a powerful processor, an amazing camera system, and a stunning display, it is the perfect device for those who demand excellence in every aspect of their smartphone experience.</p>
+        <ul>
+            <li><strong>Display:</strong> 6.8-inch AMOLED 120Hz</li>
+            <li><strong>Processor:</strong> Qualcomm Snapdragon 888</li>
+            <li><strong>Camera:</strong> Quad 64MP + 16MP + 12MP + 5MP rear cameras, 32MP front camera</li>
+            <li><strong>Battery Life:</strong> 5000mAh, up to 24 hours of use</li>
+            <li><strong>Storage:</strong> Available in 128GB, 256GB, and 512GB</li>
+        </ul>
+    </section>
+
+    <!-- Pricing and CTA Section -->
+    <section class="pricing-section">
+        <h2>Starting at RM4599</h2>
+        <p>Choose your storage and model.</p>
+
+        <!-- Product Options -->
+        <div class="product-options">
+            <div class="option">
+                <h3>128GB</h3>
+                <p>RM4599</p>
+                <button onclick="addToCart('Vico Aurora - 128GB', 4599)">Buy Now</button>
+            </div>
+            <div class="option">
+                <h3>256GB</h3>
+                <p>RM5099</p>
+                <button onclick="addToCart('Vico Aurora - 256GB', 5099)">Buy Now</button>
+            </div>
+            <div class="option">
+                <h3>512GB</h3>
+                <p>RM5599</p>
+                <button onclick="addToCart('Vico Aurora - 512GB', 5599)">Buy Now</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Additional Features -->
+    <section class="additional-features">
+        <h2>Why Choose Vico Aurora?</h2>
+        <div class="features-container">
+            <div class="feature">
+                <h3>Stunning Display</h3>
+                <p>The 6.8-inch AMOLED 120Hz display provides immersive visuals with sharp colors and smooth scrolling, perfect for gaming and media.</p>
+            </div>
+            <div class="feature">
+                <h3>Advanced Performance</h3>
+                <p>Powered by the Qualcomm Snapdragon 888, the Vico Aurora offers lightning-fast performance whether you're gaming, streaming, or multitasking.</p>
+            </div>
+            <div class="feature">
+                <h3>Pro-Grade Camera System</h3>
+                <p>The quad-camera setup with a 64MP primary sensor, along with a 32MP front camera, lets you capture professional-quality photos and videos in any light.</p>
+            </div>
+            <div class="feature">
+                <h3>Long-Lasting Battery</h3>
+                <p>The 5000mAh battery offers up to 24 hours of use, providing all-day power for gaming, work, and everything in between.</p>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <p>&copy; 2024 Vico. All rights reserved.</p>
+</footer>
+
+<script src="cart.js"></script>
+
+</body>
+</html>

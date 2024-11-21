@@ -1,0 +1,166 @@
+/* General Reset */
+body, h1, h2, h3, p, ul, li, a {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+/* Body and General Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212; /* Black theme background */
+    color: #ffffff; /* White text for contrast */
+    line-height: 1.6;
+}
+
+/* Header Styling */
+header {
+    position: fixed; /* Fixed to stay on top while scrolling */
+    top: 0;
+    width: 100%;
+    background-color: black; /* Darker black */
+    box-shadow: 0 2px 10px rgba(255, 0, 0, 0.5); /* Red shadow for accent */
+    padding: 7px 5px; /* Adjusted padding for better spacing */
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+	margin-left: -10px;
+}
+
+.logo img {
+    width: 150px;
+	margin-left: 100px;
+}
+
+nav {
+	margin-right: 30px;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ff0000; /* Red text */
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #fff; /* White on hover for contrast */
+    text-shadow: 0 0 5px rgba(255, 0, 0, 0.8); /* Red glow effect */
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 200px 20px;
+    background: linear-gradient(to bottom, #1a1a1a, #121212);
+    color: #ff0000;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: -100px;
+}
+
+.hero .button {
+    display: inline-block;
+    background-color: #ff0000;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s;
+}
+
+.hero .button:hover {
+    background-color: #cc0000; /* Darker red */
+}
+
+/* Categories Section */
+.categories {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 40px 20px;
+}
+
+.category-card {
+    background-color: #1a1a1a;
+    box-shadow: 0 10px 30px rgba(255, 0, 0, 0.5); /* Red shadow for styling */
+    border-radius: 10px;
+    text-align: center;
+    overflow: hidden;
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+.category-card:hover {
+    transform: translateY(-10px); /* Lift effect */
+    border-color: #cc0000; /* Darker red on hover */
+}
+
+.category-card img {
+    width: 50%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 2px solid #ff0000; /* Red divider */
+}
+
+.category-card h2 {
+    font-size: 1.5rem;
+    margin: 15px 0;
+    color: #ffffff;
+}
+
+.category-card p {
+    font-size: 1rem;
+    margin: 10px 20px;
+    color: #cccccc; /* Light grey text */
+}
+
+.category-card .button {
+    display: inline-block;
+    margin: 15px 0;
+    background-color: #ff0000;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s;
+}
+
+.category-card .button:hover {
+    background-color: #cc0000;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #1a1a1a;
+    color: #cccccc; /* Light grey text */
+    border-top: 2px solid #ff0000;
+}
+
+footer p {
+    font-size: 0.9rem;
+}
